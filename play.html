@@ -15,9 +15,10 @@
 function loadlink(){
     $("#change").load("./demo_test.txt");
  };
-$(document).ready(function(){
-  $("button").click(loadlink());
-});
+loadlink();
+setInterval(function(){
+    loadlink() // this will run after every 5 seconds
+}, 5000);
 </script>
 </body>
 </html>
