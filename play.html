@@ -12,11 +12,13 @@
 <div id="change"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-  $("button").click(function(){
+function loadlink(){
     $("#change").load("./demo_test.txt");
-  });
-});
+ };
+loadlink();
+setInterval(function(){
+    loadlink() // this will run after every 5 seconds
+}, 5000);
 </script>
 </body>
 </html>
